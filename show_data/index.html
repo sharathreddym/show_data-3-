@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="./randomColor.js"></script>
+  <script src="./app.js"></script>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    .red {
+      color: blue;
+    }
+    b {
+      font-family: 'Patua One', sans-serif;
+      font-size: 17px;
+      font-weight: normal;
+    }
+    h1 {
+      font-family: 'Patua One', sans-serif;
+    }
+    .box {
+      float: left;
+      width: 20px;
+      height: 20px;
+      margin: 5px;
+      border: 1px solid rgba(0, 0, 0, .2);
+    }
+    #content span {
+      /* font-family: 'Patua One', sans-serif; */
+      font-size: 16px;
+    }
+    #colors {
+      font-family: 'Patua One', sans-serif;
+    }
+    .spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #097c75;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+.spinner {
+  display: none;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Sharath - Software NER</h1>
+    <div class="form-group">
+      <textarea class="form-control" rows="10"></textarea>
+    </div>
+    <button type="button" class="btn btn-primary">Search</button>
+    <button type="button" class="btn btn-danger">Clear</button>
+    
+    <hr/>
+    <div class="spinner text-center">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+    <div class="col-md-8">
+      <div id="content">
+      </div>
+    </div>
+    <div class="col-md-offset-1 col-md-3">
+      <div id="colors"></div>
+    </div>
+  </div>
+</body>
+</html>
